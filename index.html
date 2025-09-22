@@ -42,7 +42,7 @@
         }
         .map-section iframe {
             width: 100%;
-            height: 480px;
+            height: 480px; /* Puedes ajustar la altura si es necesario */
             border: 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -59,13 +59,33 @@
             margin-top: 20px;
             color: #777;
         }
+
+        /* Estilos responsivos para dispositivos móviles */
+        @media (max-width: 768px) {
+            .container {
+                padding: 10px; /* Reduce el padding general del contenedor */
+            }
+            .content {
+                padding: 20px; /* Reduce el padding interno de las secciones */
+            }
+            /* Esto se aplica directamente al iframe si necesitas un control más fino,
+               pero el `width: 100%` ya ayuda mucho a que ocupe el espacio disponible.
+               Si aún ves márgenes excesivos, podría ser por el padding del .container
+               o del .content que envuelve el iframe. */
+            .map-section .content {
+                padding: 0; /* Elimina el padding del contenedor interno del mapa para maximizar el ancho */
+            }
+            .map-section iframe {
+                border-radius: 0; /* Opcional: para que el mapa ocupe todo el ancho sin bordes redondeados */
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <div class="container">
-            <img src="https://i.ibb.co/L6V2tB5/Logo-EBP-en-JPG.jpg" alt="Logo Escuelas Bíblicas Parroquiales" class="logo" style="max-width: 150px;">
+            <img src="logoebp.jpg" alt="Logo Escuelas Bíblicas Parroquiales" class="logo" style="max-width: 150px;">
             <h1>Escuelas Bíblicas Parroquiales</h1>
             <p>Animación Bíblica de la Pastoral Arquidiócesis de Hermosillo</p>
         </div>
@@ -83,4 +103,15 @@
     </div>
 
     <div class="container contact-info">
-        <h3>
+        <h3>Dudas?</h3>
+        <p>Comunícate por WhatsApp al: <a href="https://wa.me/526621401700" target="_blank">+52 6621401700</a></p>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Arquidiócesis de Hermosillo</p>
+        </div>
+    </footer>
+
+</body>
+</html>
