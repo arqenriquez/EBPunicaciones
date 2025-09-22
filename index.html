@@ -14,7 +14,7 @@
             color: #333;
         }
         .container {
-            max-width: 800px;
+            max-width: 1000px; /* Aumentado a 1000px para reducir el espacio en los costados */
             margin: auto;
             padding: 20px;
             text-align: center;
@@ -42,7 +42,7 @@
         }
         .map-section iframe {
             width: 100%;
-            height: 480px; /* Puedes ajustar la altura si es necesario */
+            height: 480px;
             border: 0;
             border-radius: 8px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -59,24 +59,24 @@
             margin-top: 20px;
             color: #777;
         }
-
+        .subtitle {
+            font-weight: bold; /* Hace el subtítulo en negritas */
+        }
+        
         /* Estilos responsivos para dispositivos móviles */
         @media (max-width: 768px) {
             .container {
-                padding: 10px; /* Reduce el padding general del contenedor */
+                max-width: 100%;
+                padding: 10px;
             }
             .content {
-                padding: 20px; /* Reduce el padding interno de las secciones */
+                padding: 20px;
             }
-            /* Esto se aplica directamente al iframe si necesitas un control más fino,
-               pero el `width: 100%` ya ayuda mucho a que ocupe el espacio disponible.
-               Si aún ves márgenes excesivos, podría ser por el padding del .container
-               o del .content que envuelve el iframe. */
             .map-section .content {
-                padding: 0; /* Elimina el padding del contenedor interno del mapa para maximizar el ancho */
+                padding: 0;
             }
             .map-section iframe {
-                border-radius: 0; /* Opcional: para que el mapa ocupe todo el ancho sin bordes redondeados */
+                border-radius: 0;
             }
         }
     </style>
@@ -87,13 +87,10 @@
         <div class="container">
             <img src="logoebp.jpg" alt="Logo Escuelas Bíblicas Parroquiales" class="logo" style="max-width: 150px;">
             <h1>Escuelas Bíblicas Parroquiales</h1>
-            <p>Animación Bíblica de la Pastoral Arquidiócesis de Hermosillo</p>
+            <p class="subtitle">Animación Bíblica de la Pastoral Arquidiócesis de Hermosillo</p>
+            <p>Encuentra la Escuela Bíblica más cercana y conoce más de la Palabra de Dios en tu parroquia.</p>
         </div>
     </header>
-
-    <div class="container content">
-        <p>Encuentra la Escuela Bíblica más cercana y conoce más de la Palabra de Dios en tu parroquia.</p>
-    </div>
 
     <div class="container map-section">
         <div class="content">
